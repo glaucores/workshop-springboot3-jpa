@@ -11,7 +11,6 @@ import org.springframework.web.bind.annotation.RestController;
 
 import com.educandoweb.course.entities.user;
 import com.educandoweb.course.services.UserService;
-import org.springframework.web.bind.annotation.RequestParam;
 
 
 @RestController
@@ -22,8 +21,7 @@ public class UserResource {
 	private UserService service;
 	
 	@GetMapping
-	public ResponseEntity<List<user>> findAll(){
-		
+	public ResponseEntity<List<user>> findAll() {
 		List<user> list = service.findAll();
 		return ResponseEntity.ok().body(list);
 		

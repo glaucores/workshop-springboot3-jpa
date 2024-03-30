@@ -26,7 +26,7 @@ public class user implements Serializable {
 	private String password;
 	
 	@OneToMany(mappedBy = "client")
-	private List<Order> orders = new ArrayList<>();
+	private List<user> orders = new ArrayList<>();
 	
 	
 	
@@ -111,7 +111,5 @@ public class user implements Serializable {
 		return true;
 	}
 
-	public List<Order> getOrders() {
-		return orders;
-	}
+	
 }
